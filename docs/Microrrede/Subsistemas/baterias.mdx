@@ -1,0 +1,339 @@
+---
+title: Banco de Baterias
+---
+
+# Banco de Baterias
+
+O sistema de armazenamento é composto por módulos de baterias de íons de lítio com tecnologia LiFePO₄, integrados aos inversores híbridos e ao sistema de automação. Sua função principal é armazenar parte da energia gerada pelo sistema fotovoltaico e disponibilizá-la conforme a condição operacional da instalação, ampliando a flexibilidade, a autonomia e a confiabilidade energética do sistema.
+
+Além do papel de suporte operacional, o banco de baterias possui importância acadêmica e experimental, pois permite estudar estratégias de gerenciamento energético, desempenho em regime dinâmico, profundidade de descarga, autonomia e interação entre geração, armazenamento e cargas.
+
+---
+
+## 1. Visão Geral do Sistema
+
+<div style={{ textAlign: 'center' }}>
+  <em>Figura 5 – Banco de baterias Unipower UPLFP48-100Ah.</em>
+</div>
+
+<div style={{ textAlign: 'center', margin: '1rem 0' }}>
+  
+![Figura 5 – Banco de baterias Unipower UPLFP48-100Ah.](/img/banco-baterias.jpg)
+
+</div>
+
+<div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+  <em>Fonte: elaboração própria, 2025.</em>
+</div>
+
+A Figura 5 apresenta o banco de baterias instalado. O conjunto está fisicamente integrado à infraestrutura elétrica do sistema e conectado aos inversores híbridos, permitindo operação coordenada com a geração fotovoltaica e com a rede elétrica.
+
+Do ponto de vista funcional, esse subsistema atua como elemento de suporte energético, permitindo armazenar o excedente de geração e fornecê-lo posteriormente conforme a demanda das cargas e a estratégia de controle adotada.
+
+---
+
+## 2. Caracterização do Sistema
+
+O sistema de armazenamento utiliza módulos de bateria do fabricante **Unipower**, modelo **UPLFP48-100Ah**, baseados em tecnologia **LiFePO₄ (Lítio Ferro Fosfato)**. Essa tecnologia foi selecionada por apresentar elevada segurança operacional, boa estabilidade térmica, alta eficiência energética e desempenho adequado para aplicações estacionárias e sistemas híbridos.
+
+Entre as principais vantagens dessa tecnologia, destacam-se:
+
+- elevada segurança química e térmica;
+- boa eficiência de carga e descarga;
+- longa vida útil;
+- baixa degradação ao longo do tempo;
+- integração com sistema de gerenciamento BMS;
+- possibilidade de expansão modular em paralelo.
+
+A operação em paralelo permite ampliar a capacidade energética total do banco sem alterar a tensão nominal do sistema, mantendo o barramento em 48 V e aumentando apenas a energia total disponível.
+
+---
+
+## 3. Dados Técnicos da Bateria
+
+<div style={{ textAlign: 'center', width: '70%', margin: '2rem auto 1rem auto' }}>
+  <strong>Tabela 3 – Dados técnicos do módulo de bateria Unipower UPLFP48-100Ah</strong>
+</div>
+
+<table style={{ margin: '0 auto', width: '70%', maxWidth: '850px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'left' }}>Parâmetro</th>
+      <th style={{ textAlign: 'center' }}>Especificação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Fabricante</td><td style={{ textAlign: 'center' }}>Unipower</td></tr>
+    <tr><td>Modelo</td><td style={{ textAlign: 'center' }}>UPLFP48-100Ah</td></tr>
+    <tr><td>Tecnologia</td><td style={{ textAlign: 'center' }}>LiFePO₄ (Lítio Ferro Fosfato)</td></tr>
+    <tr><td>Tensão nominal</td><td style={{ textAlign: 'center' }}>48 V</td></tr>
+    <tr><td>Capacidade nominal</td><td style={{ textAlign: 'center' }}>100 Ah</td></tr>
+    <tr><td>Energia nominal</td><td style={{ textAlign: 'center' }}>aproximadamente 5 kWh</td></tr>
+    <tr><td>Faixa de tensão de operação</td><td style={{ textAlign: 'center' }}>42 – 54,6 V</td></tr>
+    <tr><td>Corrente máxima contínua de descarga</td><td style={{ textAlign: 'center' }}>100 A</td></tr>
+    <tr><td>Corrente máxima contínua de carga</td><td style={{ textAlign: 'center' }}>50 A</td></tr>
+    <tr><td>Potência máxima contínua</td><td style={{ textAlign: 'center' }}>aproximadamente 4,8 kW</td></tr>
+    <tr><td>Profundidade de descarga recomendada (DoD)</td><td style={{ textAlign: 'center' }}>até 80 %</td></tr>
+    <tr><td>Eficiência energética</td><td style={{ textAlign: 'center' }}>superior a 95 %</td></tr>
+    <tr><td>Vida útil típica</td><td style={{ textAlign: 'center' }}>superior a 2000 ciclos (80 % DoD)</td></tr>
+    <tr><td>Temperatura de operação</td><td style={{ textAlign: 'center' }}>−10 °C a +45 °C</td></tr>
+    <tr><td>Sistema de gerenciamento</td><td style={{ textAlign: 'center' }}>BMS integrado</td></tr>
+    <tr><td>Comunicação</td><td style={{ textAlign: 'center' }}>CAN / RS-485</td></tr>
+    <tr><td>Tipo de instalação</td><td style={{ textAlign: 'center' }}>estacionária</td></tr>
+    <tr><td>Configuração elétrica</td><td style={{ textAlign: 'center' }}>paralelável</td></tr>
+    <tr><td>Grau de segurança</td><td style={{ textAlign: 'center' }}>alta estabilidade térmica</td></tr>
+  </tbody>
+</table>
+
+<div style={{ textAlign: 'center', width: '70%', margin: '1rem auto 2rem auto' }}>
+  <em>Fonte: Manual técnico da Unipower (adaptado), 2025.</em>
+</div>
+
+Os dados apresentados são fundamentais para o dimensionamento elétrico, definição dos limites operacionais, integração com os inversores híbridos e avaliação do desempenho do banco de baterias ao longo da operação da microrrede.
+
+## 4. Dimensionamento Energético e Autonomia
+
+O dimensionamento energético do banco de baterias é fundamental para a análise da capacidade de armazenamento da microrrede, pois permite estimar a energia total instalada, a parcela efetivamente utilizável e a autonomia disponível em função da potência demandada pelas cargas. No caso da microrrede da UFTM, o sistema é composto por módulos paralelizáveis de 48 V, o que possibilita ampliar a capacidade energética total sem alteração da tensão nominal do barramento CC.
+
+A energia nominal total armazenada no banco pode ser estimada pela relação:
+
+<div style={{ textAlign: 'center', margin: '1.5rem 0 0.5rem 0', fontWeight: '700' }}>
+</div>
+
+<div style={{ textAlign: 'center', fontSize: '1.6rem', fontWeight: '700', marginBottom: '1.5rem' }}>
+  <em>E</em><sub>total</sub> = n × 5 kWh
+</div>
+
+em que:
+
+- <em>E</em><sub>total</sub> = energia nominal total armazenada no banco, em kWh;
+- n = número de módulos instalados;
+- 5 kWh = energia nominal aproximada de cada módulo.
+
+Essa expressão evidencia que a expansão modular do sistema eleva diretamente a capacidade total de armazenamento, mantendo a arquitetura elétrica original do subsistema.
+
+---
+
+A energia útil pode ser estimada por:
+
+<div style={{ textAlign: 'center', margin: '1.5rem 0 0.5rem 0', fontWeight: '700' }}>
+</div>
+
+<div style={{ textAlign: 'center', fontSize: '1.6rem', fontWeight: '700', marginBottom: '1.5rem' }}>
+  <em>E</em><sub>util</sub> = <em>E</em><sub>nominal</sub> × DoD
+</div>
+
+em que:
+
+- <em>E</em><sub>util</sub> = energia útil disponível, em kWh;
+- <em>E</em><sub>nominal</sub> = energia nominal;
+- DoD = profundidade de descarga.
+
+Considerando:
+
+<div style={{ textAlign: 'center', fontSize: '1.6rem', fontWeight: '700', marginBottom: '1.5rem' }}>
+  <em>E</em><sub>util</sub> = 5 × 0,8 = 4 kWh
+</div>
+
+---
+
+A autonomia do sistema é dada por:
+
+<div style={{ textAlign: 'center', margin: '1.5rem 0 0.5rem 0', fontWeight: '700' }}>
+</div>
+
+<div style={{ textAlign: 'center', fontSize: '1.6rem', fontWeight: '700', marginBottom: '2rem' }}>
+  t = <em>E</em><sub>util</sub> / P<sub>carga</sub>
+</div>
+
+---
+
+Com base em um único módulo de bateria, obtêm-se os seguintes valores:
+
+<div style={{ textAlign: 'center', width: '70%', margin: '2rem auto 1rem auto' }}>
+  <strong>Tabela 4 – Estimativa de autonomia para um módulo de 5 kWh com DoD de 80 %</strong>
+</div>
+
+<table style={{ margin: '0 auto', width: '70%', maxWidth: '850px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'center' }}>Potência média da carga</th>
+      <th style={{ textAlign: 'center' }}>Energia útil disponível</th>
+      <th style={{ textAlign: 'center' }}>Autonomia estimada</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: 'center' }}>0,5 kW</td>
+      <td style={{ textAlign: 'center' }}>4 kWh</td>
+      <td style={{ textAlign: 'center' }}>8 h</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: 'center' }}>1,0 kW</td>
+      <td style={{ textAlign: 'center' }}>4 kWh</td>
+      <td style={{ textAlign: 'center' }}>4 h</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: 'center' }}>2,0 kW</td>
+      <td style={{ textAlign: 'center' }}>4 kWh</td>
+      <td style={{ textAlign: 'center' }}>2 h</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style={{ textAlign: 'center', width: '70%', margin: '1rem auto 2rem auto' }}>
+  <em>Fonte: elaboração própria, 2025.</em>
+</div>
+
+## 5. Parâmetros Elétricos de Operação
+
+<div style={{ textAlign: 'center', width: '50%', margin: '2rem auto 1rem auto' }}>
+  <strong>Tabela 5 – Parâmetros elétricos de operação do módulo de bateria LiFePO₄ Unipower</strong>
+</div>
+
+<table style={{ margin: '0 auto', width: '50%', maxWidth: '700px' }}>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'center' }}>Parâmetro</th>
+      <th style={{ textAlign: 'center' }}>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style={{ textAlign: 'center' }}>Tensão nominal</td><td style={{ textAlign: 'center' }}>48 V</td></tr>
+    <tr><td style={{ textAlign: 'center' }}>Faixa de tensão de operação</td><td style={{ textAlign: 'center' }}>42 – 54,6 V</td></tr>
+    <tr><td style={{ textAlign: 'center' }}>Corrente máxima contínua de carga</td><td style={{ textAlign: 'center' }}>50 A</td></tr>
+    <tr><td style={{ textAlign: 'center' }}>Corrente máxima contínua de descarga</td><td style={{ textAlign: 'center' }}>100 A</td></tr>
+    <tr><td style={{ textAlign: 'center' }}>Potência máxima contínua</td><td style={{ textAlign: 'center' }}>aproximadamente 4,8 kW</td></tr>
+    <tr><td style={{ textAlign: 'center' }}>DoD recomendado</td><td style={{ textAlign: 'center' }}>até 80 %</td></tr>
+    <tr><td style={{ textAlign: 'center' }}>Eficiência energética</td><td style={{ textAlign: 'center' }}>superior a 95 %</td></tr>
+  </tbody>
+</table>
+
+<div style={{ textAlign: 'center', width: '50%', margin: '1rem auto 2rem auto' }}>
+  <em>Fonte: elaboração própria com base no manual técnico da Unipower, 2025.</em>
+</div>
+
+## 6. Comportamento Energético
+
+<div style={{ textAlign: 'center', margin: '2rem 0' }}>
+
+  <em>Figura 6 – Relação entre a profundidade de descarga (DoD) e a energia utilizável do banco de baterias LiFePO₄.</em>
+
+  <div style={{ margin: '1rem 0' }}>
+    
+![Figura 6 – Relação entre DoD e energia utilizável](/img/bateria-dod-energia.jpg)
+
+  </div>
+
+  <div style={{ marginTop: '0.8rem' }}>
+    <em>Fonte: elaboração própria, 2025.</em>
+  </div>
+
+</div>
+
+A Figura 6 ilustra a relação entre profundidade de descarga e energia utilizável. À medida que o DoD aumenta, cresce também a parcela da energia nominal efetivamente disponibilizada em cada ciclo de operação.
+
+Esse comportamento favorece maior aproveitamento energético no curto prazo, porém impõe maior solicitação eletroquímica às células. Assim, a definição do limite de DoD deve buscar equilíbrio entre disponibilidade energética imediata e preservação do sistema de armazenamento.
+
+---
+
+## 7. Vida Útil
+
+<div style={{ textAlign: 'center', margin: '2rem 0' }}>
+
+  <em>Figura 7 – Efeito da profundidade de descarga (DoD) sobre a vida útil relativa do banco de baterias LiFePO₄.</em>
+
+  <div style={{ margin: '1rem 0' }}>
+    
+![Figura 7 – Efeito do DoD na vida útil](/img/bateria-dod-vida-util.jpg)
+
+  </div>
+
+  <div style={{ marginTop: '0.8rem' }}>
+    <em>Fonte: elaboração própria, 2025.</em>
+  </div>
+
+</div>
+
+A Figura 7 mostra o efeito do DoD sobre a vida útil relativa do banco de baterias. Em termos práticos, valores menores de profundidade de descarga tendem a aumentar significativamente o número de ciclos suportados pelo sistema.
+
+Desse modo, a operação com limites adequados de descarga constitui uma estratégia importante para aumentar a durabilidade do banco de baterias, especialmente em aplicações acadêmicas e experimentais que demandam repetibilidade operacional e elevada confiabilidade.
+
+---
+
+## 8. Integração do Banco de Baterias com os Inversores Híbridos
+
+O banco de baterias encontra-se integrado aos inversores híbridos da microrrede, que realizam o condicionamento da energia e o gerenciamento do fluxo entre geração fotovoltaica, armazenamento, cargas e rede elétrica.
+
+Essa integração é realizada por meio de protocolos de comunicação como **CAN** e **RS-485**, permitindo troca contínua de informações operacionais. Com isso, os inversores podem monitorar estado de carga, tensão, corrente e temperatura, ajustando automaticamente os limites de carga e descarga conforme as condições reais do sistema.
+
+Do ponto de vista funcional, essa interface torna possível:
+
+- armazenar o excedente de geração fotovoltaica;
+- fornecer energia às cargas em períodos de baixa geração;
+- participar da operação isolada da microrrede;
+- reduzir a dependência da rede elétrica externa;
+- melhorar a flexibilidade operacional do sistema.
+
+---
+
+## 9. Proteções Implementadas pelo Sistema de Gerenciamento BMS
+
+<div style={{ textAlign: 'center', margin: '2rem 0' }}>
+
+  <em>Figura 8 – Lógica de operação e proteção do sistema BMS.</em>
+
+  <div style={{ margin: '1rem 0' }}>
+    
+![Figura 8 – Lógica de operação e proteção do sistema BMS](/img/bms-logica.png)
+
+  </div>
+
+  <div style={{ marginTop: '0.8rem' }}>
+    <em>Fonte: elaboração própria, 2025.</em>
+  </div>
+
+</div>
+
+O módulo de bateria possui **BMS integrado**, responsável pelo monitoramento contínuo das grandezas elétricas e térmicas, bem como pela execução das funções de proteção e balanceamento das células.
+
+Entre as principais funções do BMS, destacam-se:
+
+- proteção contra sobrecarga;
+- proteção contra descarga profunda;
+- proteção contra curto-circuito;
+- proteção contra sobretemperatura;
+- proteção contra desequilíbrio entre células;
+- balanceamento das células;
+- comunicação com os inversores e com o sistema supervisório.
+
+A atuação do BMS é essencial para garantir segurança operacional, preservar a integridade das células e prolongar a vida útil do conjunto.
+
+---
+
+## 10. Requisitos Técnicos de Instalação
+
+A instalação do banco de baterias deve seguir as recomendações do fabricante e os requisitos aplicáveis à segurança elétrica em sistemas de armazenamento estacionário, de forma a assegurar operação confiável, proteção dos equipamentos e condições adequadas de uso na microrrede.
+
+Entre os requisitos mais importantes, destacam-se:
+
+- instalação em ambiente com ventilação adequada e proteção contra umidade excessiva;
+- observância da faixa de temperatura recomendada para operação;
+- dimensionamento correto das conexões elétricas de potência;
+- integração adequada com os inversores híbridos e com o sistema de controle;
+- organização física que favoreça inspeção, manutenção e operação segura;
+- possibilidade de expansão modular por associação em paralelo.
+
+Além desses requisitos básicos, a instalação deve atender a critérios técnicos que assegurem compatibilidade elétrica e desempenho operacional do sistema. Nesse contexto, é necessário manter a tensão do barramento dentro da faixa admissível dos módulos e compatível com os inversores, bem como respeitar os limites de corrente de carga e descarga especificados, evitando sobrecargas e aquecimento excessivo em cabos, terminais e dispositivos associados.
+
+Também é essencial utilizar cabos, conectores e dispositivos de proteção adequadamente selecionados para a corrente nominal do sistema, além de garantir o aterramento apropriado das partes metálicas e da estrutura associada ao banco. Do ponto de vista construtivo, a montagem deve evitar esforços mecânicos sobre bornes e cabos, prever espaçamento suficiente entre módulos e equipamentos adjacentes e permitir dissipação térmica compatível com a operação contínua.
+
+Outro aspecto relevante diz respeito à infraestrutura de comunicação e supervisão. A instalação deve preservar a integridade dos enlaces CAN e/ou RS-485, assegurando a troca confiável de dados entre o banco de baterias, o BMS, os inversores e o sistema supervisório. Adicionalmente, a identificação de circuitos, polaridades, módulos e interfaces de comunicação é importante para facilitar procedimentos de inspeção, manutenção e rastreabilidade operacional.
+
+Sob a ótica ambiental, recomenda-se que o sistema seja instalado em local com baixa incidência de poeira, agentes corrosivos e vibrações excessivas, de modo a reduzir esforços adicionais sobre os componentes e preservar sua vida útil. Da mesma forma, o arranjo físico do banco deve ser compatível com eventuais ampliações futuras de capacidade, especialmente em sistemas modulares projetados para expansão.
+
+No contexto operacional, a instalação deve permitir o monitoramento contínuo de grandezas relevantes, como tensão, corrente, temperatura e estado de carga, fornecendo ao BMS as condições necessárias para atuação adequada em situações anormais. A integração correta entre módulos, sistema de gerenciamento e inversores é indispensável para o controle seguro dos processos de carga e descarga, para o balanceamento das células e para a mitigação de falhas como sobrecarga, descarga profunda, sobretemperatura e desequilíbrios internos.
+
+No caso da microrrede da UFTM, a configuração paralelizável do sistema representa uma característica particularmente importante, pois amplia a flexibilidade experimental e viabiliza estudos sobre autonomia, estratégias de gerenciamento energético e impacto do aumento da capacidade instalada. Assim, a adoção de critérios técnicos adequados de instalação contribui não apenas para a segurança e durabilidade do banco de baterias, mas também para a confiabilidade dos ensaios e análises desenvolvidos no ambiente acadêmico.
+
+---
