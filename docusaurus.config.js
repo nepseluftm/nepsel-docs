@@ -6,10 +6,10 @@ const config = {
   tagline: 'Documentação técnica da Microrrede UFTM, Qualidade da Energia Elétrica e OpenDSS',
   favicon: 'img/logo-nepsel.png',
 
-  url: 'https://gabrielfbot.github.io',
+  url: 'https://nepseluftm.github.io',
   baseUrl: '/nepsel-docs/',
 
-  organizationName: 'gabrielfbot',
+  organizationName: 'nepseluftm',
   projectName: 'nepsel-docs',
 
   onBrokenLinks: 'throw',
@@ -58,7 +58,7 @@ const config = {
           label: 'Documentação',
         },
         {
-          href: 'https://github.com/gabrielfbot/nepsel-docs',
+          href: 'https://github.com/nepseluftm/nepsel-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -81,7 +81,7 @@ const config = {
           title: 'Microrrede UFTM',
           items: [
             {
-              label: 'Visão geral',
+              label: 'Visão Geral',
               to: '/docs/Microrrede/visao-geral',
             },
             {
@@ -142,7 +142,7 @@ const config = {
           title: 'Qualidade da Energia',
           items: [
             {
-              label: 'Visão geral',
+              label: 'Visão Geral',
               to: '/docs/qualidade-energia/visao-geral',
             },
             {
@@ -215,7 +215,7 @@ const config = {
           title: 'OpenDSS',
           items: [
             {
-              label: 'Visão geral',
+              label: 'Visão Geral',
               to: '/docs/opendss/visao-geral',
             },
             {
@@ -281,7 +281,7 @@ const config = {
           items: [
             {
               label: 'Repositório GitHub',
-              href: 'https://github.com/gabrielfbot/nepsel-docs',
+              href: 'https://github.com/nepseluftm/nepsel-docs',
             },
           ],
         },
